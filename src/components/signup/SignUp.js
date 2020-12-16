@@ -91,7 +91,7 @@ class SignUp extends React.Component {
                 if (this.state.inputs[2].value.length > 5){
                     if(this.state.checked){
                        
-                            window.location.href = "crm/project/signin"
+                            window.location.href = "/signin"
                             this.setState({error:"Loading"})
                        
                     }
@@ -157,7 +157,7 @@ class SignUp extends React.Component {
                         
                         
                         <div className="da">
-                            <p>Already have an account? <Link to="crm/project/signin" className='signup'>Login</Link></p>
+                            <p>Already have an account? <Link to="/signin" className='signup'>Login</Link></p>
                         </div>
 
                     </div>
