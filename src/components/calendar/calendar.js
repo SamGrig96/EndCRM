@@ -77,37 +77,37 @@ class Calendar extends SampleBase {
 
 
 
-            Axios.post('http://localhost:8080/api/calendarEvent/addEvents', args.addedRecords[0])
-                .then(res =>{
-                     console.log(res.data, 'data')
-                     this.getId()
-                    })
-                .catch(err => {
-                    console.log(err);
+//             Axios.post('http://localhost:8080/api/calendarEvent/addEvents', args.addedRecords[0])
+//                 .then(res =>{
+//                      console.log(res.data, 'data')
+//                      this.getId()
+//                     })
+//                 .catch(err => {
+//                     console.log(err);
 
-                })
+//                 })
             
         }
 
         if (args.changedRecords && args.changedRecords.length > 0) {
             console.log(args, 'args.changedRecords')
-            Axios.put(`http://localhost:8080/api/calendarEvent/addEvents/update/${args.changedRecords[0]['_id']}`, args.changedRecords[0])
-                .then(res => {
-                    // console.log(res.config, 'change')
+//             Axios.put(`http://localhost:8080/api/calendarEvent/addEvents/update/${args.changedRecords[0]['_id']}`, args.changedRecords[0])
+//                 .then(res => {
+//                     // console.log(res.config, 'change')
                   
-                })
-                .catch(err => {
-                    // console.log(err) 
-                })
+//                 })
+//                 .catch(err => {
+//                     // console.log(err) 
+//                 })
         }
 
 
         if (args.deletedRecords && args.deletedRecords.length > 0) {
-            Axios.delete(`http://localhost:8080/api/calendarEvent/addEvents/delete/${args.deletedRecords[0]['_id']}`)
-                .then(res => {
-                    // console.log(res.config,"delete")
+//             Axios.delete(`http://localhost:8080/api/calendarEvent/addEvents/delete/${args.deletedRecords[0]['_id']}`)
+//                 .then(res => {
+//                     // console.log(res.config,"delete")
                    
-                })
+//                 })
             // .catch(err=>{console.log(err)})
         }
 
