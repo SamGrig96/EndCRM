@@ -84,7 +84,7 @@ class SignIn extends React.Component {
                                 if (this.state.checked) {
                                     localStorage.setItem('remmember', true)
                                 }
-                                window.location.href = "crm/project/dashboard"
+                                window.location.href = "/"
 
                                 this.setState({error:'Loading!!!'})
                         
