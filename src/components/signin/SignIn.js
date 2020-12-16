@@ -122,7 +122,7 @@ class SignIn extends React.Component {
                         <span className="checkmark" ></span>Remember me</label>
 
                         <div className="submit">    
-                       <Link to ='/crm/project/dashboard'><Popup trigger={< button type='submit' >LOGIN <FiArrowRightCircle   size={25}/> </button>} position='right center'></Link>
+                      <Popup trigger={< button type='submit' >LOGIN <FiArrowRightCircle   size={25}/> </button>} position='right center'>
                         <div className='errorBlock'><p> {this.state.error} </p></div>
                         </Popup>
                         </div>
