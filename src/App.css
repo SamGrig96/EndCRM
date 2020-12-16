@@ -1,38 +1,452 @@
-.App {
-  text-align: center;
+ /* some basic styles. nothing to do with flexbox
+ header, footer,
+ nav, article, aside {
+   border: 0px solid silver;
+   padding: 0;
+   margin: 0px;
+
+ }
+
+
+ html, body, .viewport {
+   width: 100%;
+   height: 100%;
+   margin: 0;
+
+   font-size: 12px;
+ }
+
+div#root {
+
+
+  display: -webkit-flex;
+  display:    -moz-flex;
+  display:     -ms-flex;
+  display:         flex;
+
+  -webkit-flex-direction: column;
+     -moz-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+
+          width: 100%;
+          height: 100%;
+          margin: 0;
+
+ }
+
+
+ .vbox {
+
+   display: -webkit-flex;
+   display:    -moz-flex;
+   display:     -ms-flex;
+   display:         flex;
+
+   -webkit-flex-direction: column;
+      -moz-flex-direction: column;
+       -ms-flex-direction: column;
+           flex-direction: column;
+ }
+
+ /* items flex/expand horizontally */
+ /* .hbox {
+   display: -webkit-flex;
+   display:    -moz-flex;
+   display:     -ms-flex;
+   display:         flex;
+
+   -webkit-flex-direction: row;
+      -moz-flex-direction: row;
+       -ms-flex-direction: row;
+           flex-direction: row;
+ }
+
+ .space-between {
+   -webkit-justify-content: space-between;
+      -moz-justify-content: space-between;
+       -ms-justify-content: space-between;
+           justify-content: space-between;
+ }
+
+ header, footer {
+   height: 50px;
+ }
+
+ .main {
+   -webkit-flex: 1;
+      -moz-flex: 1;
+       -ms-flex: 1;
+           flex: 1;
+       overflow: auto;
+ }
+
+ article {
+   -webkit-flex: 5;
+      -moz-flex: 5;
+       -ms-flex: 5;
+           flex: 5;
+ }
+
+ aside, nav {
+   -webkit-flex: 1;
+      -moz-flex: 1;
+       -ms-flex: 1;
+           flex: 1;
+ } */ */
+
+
+
+ /*helllo*/
+
+
+
+
+ /* body {
+    margin: 0;
+
+} */
+
+body{
+  /* width: 100%;
+  height: 100%; */
+  /* margin: 0; */
+
+  font-size: 14px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.wrapperr {
+
+   background-color: white;
+   flex-flow: row wrap;
+   font-weight: bold;
+   text-align: center;
+   display: flex;
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.wrapper>* {
+   /*padding: 30px;*/
+   flex: 1 100%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+nav {
+   margin: 20px;
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   font-family: 'Poppins', sans-serif;
+   flex: auto;
 }
 
-.App-link {
-  color: #61dafb;
+.nav-links li {
+   list-style: none;
+   margin: 0 40px;
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.nav-links {
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+}
+
+.nav-links a {
+   color: black;
+   text-decoration: none;
+   letter-spacing: 3px;
+   font-weight: bold;
+   font-size: 18px
+}
+
+li:last-child {
+   border: 1px solid blue;
+   /* width: 150px; */
+   padding: 10px 5px;
+   border-radius: 30px;
+   background-color: blue;
+}
+
+li .last {
+   color: white
+}
+
+@media screen and (max-width:1200px) {
+   .nav-links {
+       width: 90%;
+   }
+   .nav-links li {
+       margin: 10px
+   }
+}
+
+@media screen and (max-width:900px) {
+   body {
+       overflow-x: hidden
+   }
+   .nav-links {
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+   }
+}
+
+.main {
+   text-align: center;
+   display: inline-block;
+   justify-content: center;
+}
+
+.main>.main-text {
+   font-size: 46px;
+   font-family: sans-serif
+}
+
+.main>.content-text {
+   font-size: 18px;
+   font-family: sans-serif;
+   line-height: 1.6em
+}
+
+.main>.main-text-2 {
+   font-size: 46px;
+   font-family: sans-serif
+}
+
+.main>.lorom-ispum {
+   font-size: 18px;
+   font-family: sans-serif;
+   line-height: 1.6em
+}
+
+div>.image-1 {
+   width: 90%
+}
+
+.button {
+   outline: none;
+   padding: 14px 60px;
+   border: 2px solid royalblue;
+   border-radius: 30px;
+   font-size: 26px;
+   color: royalblue;
+   background-color: white;
+}
+
+button:hover {
+   cursor: pointer
+}
+
+@media all and (max-width:1200px) {
+   body {
+       width: 100%
+   }
+   div>.main-image {
+       width: 80%;
+   }
+}
+
+@media all and (max-width: 1240px) {
+   .index-gallery {
+       display: flex;
+       flex-flow: column;
+   }
+   .create-account-container {
+       display: block !important;
+       width: 100%;
+   }
+   .account-image > img {width:40%}
+}
+
+.create-account-container{
+   display: flex ;
+   width: 100%;
+}
+
+.main-text-3 {
+   font-size: 36px;
+   font-family: 'Poppins', sans-serif;
+}
+
+.index-gallery>div {
+   text-align: center;
+   flex: 1;
+}
+
+.index-gallery div>img {
+   width: max-content;
+   height: max-content;
+   margin: 0 100px;
+}
+
+.index-gallery {
+   display: flex;
+   padding: 20px;
+   justify-content: center;
+   box-sizing: border-box;
+}
+
+.index-gallery div>.item-text {
+   font-size: 18px;
+   font-family: 'Poppins', sans-serif;
+}
+
+.index-gallery div>.item-content-text {
+   font-size: 14px;
+   font-family: 'Poppins', sans-serif;
+   line-height: 1.6em;
+}
+
+.create-account-container {
+   background-color: #e6eefa;
+   /* display: flex; */
+   flex-direction: row-reverse;
+   align-items: center;
+   justify-content: space-around;
+   box-sizing: border-box;
+   padding: 48px 16px 16px;
+}
+
+.account-image {
+   width: 100%;
+   flex: 1;
+   flex-direction: column;
+}
+
+.account-image>img {
+   justify-content: center;
+   width: 50%
+}
+
+.create-account {
+   display: inline-block;
+   justify-content: center;
+
+}
+
+.account-text {
+   font-size: 35px;
+   font-family: 'Poppins', sans-serif;
+}
+
+.account-content {
+   line-height: 1.8em;
+   font-size: 16px;
+   font-family: 'Poppins', sans-serif;
+   text-align: justify;
+   text-justify: inter-word;
+}
+
+.account-button {
+   margin: 50px 5px;
+   width: 400px
+}
+
+.account-button button {
+   font-family: 'Poppins', sans-serif;
+   background-color: #e6eefa;
+   border-radius: 35px
+}
+
+.account-image {
+   width: 100%;
+   flex-direction: column;
+}
+
+@media only screen and (max-width:768px) {
+   .create-account {
+       display: flex;
+       flex-flow: column;
+   }
+
+}
+
+.footer {
+   width: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: space-around;
+   background-color: #1f1f1f;
+}
+
+.social-links a{
+   border-right: 1px solid white;
+}
+
+@media only screen and (max-width:768px) {
+   .footer {
+       flex-flow: column;
+       justify-content: center;
+   }
+}
+
+.footer img {
+   justify-content: flex-start;
+   padding: 15px;
+}
+
+.footer p {
+   color: #8a8a8a;
+   font-family: sans-serif;
+}
+
+p span {
+   color: red
+}
+
+
+
+.social-links {
+   display: flex;
+   justify-content: space-around;
+}
+
+.social-links i{
+   color: #fff;
+   font-size: 24px;
+}
+
+.social-links a{
+   border-right: 1px solid gray;
+   padding: 4px 16px;
+   margin-left: 8px;
+}
+
+.social-links a:last-child{
+   border: 0;
+}
+
+@media only screen and (max-width: 768px) {
+   .main {
+       align-content: center;
+       display: inline;
+
+   }
+   .social-links img {height: 10px; }
+   .account-content {
+       padding: 16px;
+       text-align: center;
+       margin: 0;
+   }
+   .account-text {
+       font-size: 24px;
+   }
+   .create-account {
+       margin: 0;
+   }
+   .footer {
+       padding: 0 15px
+   }
+   nav {
+       margin: 0 30px
+   }
+   .nav-links {
+       margin: 10px 55px;
+   }
+   .create-account-container{
+       display: block !important;
+       width: 100%;
+
+   }
+   .footer{display: block ; width: 100%;}
 }
