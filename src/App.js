@@ -19,7 +19,7 @@ class App extends Component {
   render() {
     return (
 
-      <Router  >
+      <Router  basename='crm/project/'>
             <Switch>
         <Route exact path="/signup" component={SignUp} />
         <Route exact path="/signin" component={SignIn} />
