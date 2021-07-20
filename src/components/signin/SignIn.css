@@ -1,11 +1,5 @@
-/* html, body {
-  margin: 0;
-  background-color: #f9f9f9;
-  font-family: sans-serif;
-} */
 
 .wrapper-login {
-  /* background-color: white; */
   max-width: 464px;
   width: 100%;
   text-align: center;
@@ -58,7 +52,6 @@
   font-size: 14px;
 }
 
-/* .login{display:flex; flex-direction: column; padding: 10px;} */
 
 .textbox {
   width: 100%;
@@ -172,10 +165,6 @@ button:hover {
 
 button i {
   font-size: 32px;
-  /* font-weight: lighter; */
-  /* position: relative; */
-  /* left: 15%; */
-  /* font-weight: 400; */
   position: absolute;
   margin: -7px 40px;
 }
